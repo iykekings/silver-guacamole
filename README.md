@@ -1,4 +1,4 @@
-# Adventure of code in Rust, Haskell, Kotlin, F# and Clojure
+# Advent of code in Rust, Haskell, Kotlin, F# and Clojure
 
 Since I haven't used some of these languages before now, I will be very slow with pushing new solutions.
 Do feel free to contribute in any way!
