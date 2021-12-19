@@ -16,10 +16,10 @@
     (list (fn' a b) (+ b x) (+ c y))))
 
 (defn solution []
-  (with-open [rdr (io/reader "../input.txt")]
+  (with-open [rdr (io/reader "./input.txt")]
     (->> (line-seq rdr)
          (map parseMove)
          (reduce sumTuples '(0 0 0))
          (apply #(* %1 %3)))))
 
-
+(print (solution))

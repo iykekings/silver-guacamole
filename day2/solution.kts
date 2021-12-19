@@ -2,10 +2,6 @@ package part1
 
 import java.io.File
 
-fun main() {
-    println(solution())
-}
-
 fun String.parseMove(): Pair<Int, Int> =
         this.split(" ").let {
             val value = it[1].toInt()
@@ -17,7 +13,7 @@ fun String.parseMove(): Pair<Int, Int> =
         }
 
 fun solution(): Int {
-    return File("../input.txt")
+    return File("./input.txt")
             .readLines()
             .fold(Pair(0, 0)) { (x, y), it ->
                 val (a, b) = it.parseMove()
@@ -25,3 +21,5 @@ fun solution(): Int {
             }
             .let { (f, s) -> f * s }
 }
+
+solution()

@@ -11,7 +11,7 @@ module Solution =
         | _ -> (0, 0)
 
     let solution =
-        File.ReadLines("../input.txt")
+        File.ReadLines("./input.txt")
         |> Seq.map parseMove
         |> Seq.fold (fun (x, y) (a, b) -> (x + a, y + b)) (0, 0)
         |> fun (a, b) -> a * b

@@ -13,7 +13,7 @@ module Solution2 =
     let sumTuples (a, b, c) (fn, x, y) = (fn (a, b), b + x, c + y)
 
     let solution =
-        File.ReadLines("../input.txt")
+        File.ReadLines("./input.txt")
         |> Seq.map parseMove
         |> Seq.fold sumTuples (0, 0, 0)
         |> fun (a, _, b) -> a * b

@@ -16,10 +16,14 @@ fn parse_move(line: &str) -> (Box<dyn Fn(i32, i32) -> i32>, i32, i32) {
 }
 
 pub fn solution() -> i32 {
-    let (x, _, y) = std::fs::read_to_string("../input.txt")
+    let (x, _, y) = std::fs::read_to_string("./input.txt")
         .unwrap()
         .lines()
         .map(|it| parse_move(it))
         .fold((0, 0, 0), |(a, b, c), (f, x, y)| (f(a, b), b + x, c + y));
     return x * y;
+}
+
+fn main() {
+    println!("{}", solution())
 }

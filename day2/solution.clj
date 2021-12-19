@@ -17,11 +17,11 @@
   (list (+ (first acc) (first next)) (+ (second acc) (second next))))
 
 (defn solution []
-  (with-open [rdr (io/reader "../input.txt")]
+  (with-open [rdr (io/reader "./input.txt")]
     (->> (line-seq rdr)
          (map parseMove)
          (reduce sumTuples)
          (apply *))))
 
 
-(solution)
+(print (solution))

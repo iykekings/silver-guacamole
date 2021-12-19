@@ -12,7 +12,7 @@ fn parse_move(line: &str) -> (i32, i32) {
 }
 
 pub fn solution() -> i32 {
-    let (x, y) = std::fs::read_to_string("../input.txt")
+    let (x, y) = std::fs::read_to_string("./input.txt")
         .unwrap()
         .lines()
         .fold((0, 0), |(acc1, acc2), line| {
@@ -20,4 +20,8 @@ pub fn solution() -> i32 {
             (acc1 + f, acc2 + s)
         });
     return x * y;
+}
+
+fn main() {
+    println!("{}", solution())
 }
