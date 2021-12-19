@@ -31,9 +31,9 @@ kotlinc -script {filename}.kts
 
 ### Haskell
 
-- ```sh
-    ghci {filename}.hs
-    ```
+```sh
+ghci {filename}.hs
+```
 
 ### F Sharp
 
