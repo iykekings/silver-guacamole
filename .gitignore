@@ -1,1 +1,7 @@
 .ionide
+bin
+obj
+target
+.fake
+.lsp
+.clj-kondo
